@@ -1,5 +1,5 @@
 =begin
-  
+
   # write code such that I can say
 
   m = MetaProgram.new(h)
@@ -13,5 +13,19 @@
 class MetaProgram
   def initialize(h)
     @h = h
+    p @h
   end
+
+  def this
+    p "There are your hash keys #{@h.keys}"
+  end
+
+  def values
+    p "There are your hash values #{@h.values}" 
+  end
+
 end
+
+  m = MetaProgram.new({this: "that", woo: "nope"})
+  m.this
+  m.values

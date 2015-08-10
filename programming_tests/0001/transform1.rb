@@ -1,8 +1,8 @@
 =begin
-  
+
 Write code inside the to_hash method below, such that when you take this string...
 
-'{first: "Stephen", last: "King", joined: ["first", "2015-07-26T16:06:41-07:00"]}'
+  '{first: "Stephen", last: "King", joined: ["first", "2015-07-26T16:06:41-07:00"]}'
 
 ...and call Transform1.new(str).to_hash, and this hash will be output:
 
@@ -15,6 +15,10 @@ class Transform1
   end
 
   def to_hash
-    #code goes here
+    @str.gsub("'", "")
+    p @str
   end
 end
+
+
+Transform1.new('{first: "Stephen", last: "King", joined: ["first", "2015-07-26T16:06:41-07:00"]}').to_hash
